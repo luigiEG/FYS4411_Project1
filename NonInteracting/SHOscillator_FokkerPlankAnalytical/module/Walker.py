@@ -49,7 +49,7 @@ class FokkerPlankWalker:
         self.QF = self.system.quantum_force(self.X)
 
         if (subgroup_size is None) and (delta is None):
-            self.subgroup_size = self.system.N
+            self.subgroup_size = int(sqrt(self.system.N))
             self.delta = 0.01
         
         if subgroup_size is None and delta is not None:
