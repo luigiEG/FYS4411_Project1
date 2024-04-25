@@ -13,6 +13,9 @@ from numba import int32, float64, types
 
 import matplotlib.pyplot as plt
 
+from module.QuantumSystem import SHOscillator
+
+
 
 # the class MetropolisWalker have the following attributes:
 # - system: the quantum system
