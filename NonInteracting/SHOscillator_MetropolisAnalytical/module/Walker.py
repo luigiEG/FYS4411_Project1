@@ -79,7 +79,7 @@ class MetropolisWalker:
     def test(self, X_new):
         # test the move
         likelihood = np.exp(2*(self.system.log_wavefunction(X_new) - self.system.log_wavefunction(self.X)))
-        return np.random.random() < likelihood
+        return (np.random.random() < likelihood) or (np.random.random() == likelihood)
 
     def get_chain(self, n_steps):
         # get a chain
